@@ -61,3 +61,16 @@ void ingresarDatos(struct alumno *estudiante)
     printf("Promedio: ");
     scanf("%f", &estudiante->promedio);
 }
+// Función para mostrar datos de un alumno
+void mostrarDatos(const struct alumno *estudiante)
+{
+    // Muestra datos usando puts(imprime una cadena de caracteres en la salida estandar)
+    printf("Matrícula: %d\n", estudiante->matricula);
+    printf("Nombre: ");
+    puts(estudiante->nombre);
+    printf("Dirección: ");
+    puts(estudiante->direccion);
+    printf("Carrera: ");
+    puts(estudiante->carrera);
+    printf("Promedio: %.2f\n", estudiante->promedio);
+}
