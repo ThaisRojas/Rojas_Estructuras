@@ -40,3 +40,24 @@ int main()
 
     return 0;
 }
+
+void ingresarDatos(struct alumno *estudiante)
+{
+    fflush(stdin); // Limpia el buffer de entrada
+
+    // Ingresar datos usando gets(lee una cadena de caracteres desde la entrada estandar)
+    printf("Matrícula: ");
+    scanf("%d", &estudiante->matricula);
+    fflush(stdin);
+    printf("Nombre: ");
+    gets(estudiante->nombre);
+    fflush(stdin);
+    printf("Dirección: ");
+    gets(estudiante->direccion);
+    fflush(stdin);
+    printf("Carrera: ");
+    gets(estudiante->carrera);
+    fflush(stdin);
+    printf("Promedio: ");
+    scanf("%f", &estudiante->promedio);
+}
